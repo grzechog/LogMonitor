@@ -73,7 +73,8 @@ Shortly after Thread 1 is started Thread 2 starts.
 
 ## Successfull program output example
 
-`11:48:10.653 [Thread-0] INFO  main.Main - Beginning to read log file at logfile.txt
+```
+11:48:10.653 [Thread-0] INFO  main.Main - Beginning to read log file at logfile.txt
 11:48:10.693 [Thread-0] DEBUG event.Event - Created Event with id: scsmbstgra
 11:48:10.693 [Thread-0] DEBUG event.Event - Created Event with id: scsmbstgrc
 11:48:10.693 [Thread-0] DEBUG event.Event - Created Event with id: scsmbstgrb
@@ -89,4 +90,5 @@ Shortly after Thread 1 is started Thread 2 starts.
 11:48:10.879 [Thread-1] DEBUG jdbcutils.JDBCUtils - Succesfully recorded event 'scsmbstgra' in the database
 11:48:10.879 [Thread-1] DEBUG jdbcutils.JDBCUtils - Succesfully recorded event 'scsmbstgrc' in the database
 11:48:10.879 [Thread-1] DEBUG jdbcutils.JDBCUtils - Succesfully recorded event 'scsmbstgrb' in the database
-11:48:10.942 [Thread-1] INFO  main.Main - Finished adding Events to the database`
+11:48:10.942 [Thread-1] INFO  main.Main - Finished adding Events to the database
+```
