@@ -52,20 +52,22 @@ To handle large files and avoid running into *OutOfMemoryError* the program uses
 
 ## Step-by-step operations
 
-The **LogMonitor** performs its task following the below algorithm:
+The **LogMonitor** performs its tasks following the below algorithm:
+
+Step 0: define threads and start them.
 
 **Thread 1**
 1. Read a file as a stream of data      
-2. Serialise JSON into Entry objects and add the to the list
-3. Each time the entry is added it looks for a sibling entry with the same ID
-4. If a pair is found it tries to create an Event object and add it to the event List
-5. Upon successful event creation, the entries are removed from the list for perfomance reasons
+2. Serialise JSON into *Entry* objects and add the to the list
+3. Each time the entry is added, look for a sibling *Entry* with the same ID
+4. If a pair is found try to create an *Event* object and add it to the event *List*
+5. Upon successful event creation, the log entries are removed from the list for perfomance reasons
 
 Shortly after Thread 1 is started, Thread 2 starts.
 
 **Thread 2**
 1. Open connection to the database
-2. Create a copy of the list, to remove the lock on the events list.
+2. Create a copy of the current *Event* list, to remove the lock on the shared events list.
 3. Remove the cloned events from the shared list.
 4. For each item on the cloned events list execute an Insert query on the database
 5. When finished check if Thread 1 is still running. If it does, go back to point 2 and start again.
