@@ -73,20 +73,20 @@ Shortly after Thread 1 is started Thread 2 starts.
 
 ## Successfull program output example
 
-> 11:48:10.653 [Thread-0] INFO  main.Main - Beginning to read log file at logfile.txt
-> 11:48:10.693 [Thread-0] DEBUG event.Event - Created Event with id: scsmbstgra
-> 11:48:10.693 [Thread-0] DEBUG event.Event - Created Event with id: scsmbstgrc
-> 11:48:10.693 [Thread-0] DEBUG event.Event - Created Event with id: scsmbstgrb
-> 11:48:10.693 [Thread-0] INFO  main.Main - Finished parsing a log file. Left 0 entries unmatched.
-> 11:48:10.845 [Thread-1] INFO  hsqldb.db.HSQLDB77E877A3CB.ENGINE - Checkpoint start
-> 11:48:10.846 [Thread-1] INFO  hsqldb.db.HSQLDB77E877A3CB.ENGINE - checkpointClose start
-> 11:48:10.847 [Thread-1] INFO  hsqldb.db.HSQLDB77E877A3CB.ENGINE - checkpointClose synched
-> 11:48:10.851 [Thread-1] INFO  hsqldb.db.HSQLDB77E877A3CB.ENGINE - checkpointClose script done
-> 11:48:10.867 [Thread-1] INFO  hsqldb.db.HSQLDB77E877A3CB.ENGINE - checkpointClose end
-> 11:48:10.868 [Thread-1] INFO  hsqldb.db.HSQLDB77E877A3CB.ENGINE - Checkpoint end - txts: 1
-> 11:48:10.875 [Thread-1] DEBUG jdbcutils.JDBCUtils - Creating table in the database if not existent.
-> 11:48:10.877 [Thread-1] INFO  main.Main - Beginning to add Events to the database
-> 11:48:10.879 [Thread-1] DEBUG jdbcutils.JDBCUtils - Succesfully recorded event 'scsmbstgra' in the database
-> 11:48:10.879 [Thread-1] DEBUG jdbcutils.JDBCUtils - Succesfully recorded event 'scsmbstgrc' in the database
-> 11:48:10.879 [Thread-1] DEBUG jdbcutils.JDBCUtils - Succesfully recorded event 'scsmbstgrb' in the database
-> 11:48:10.942 [Thread-1] INFO  main.Main - Finished adding Events to the database
+'11:48:10.653 [Thread-0] INFO  main.Main - Beginning to read log file at logfile.txt
+11:48:10.693 [Thread-0] DEBUG event.Event - Created Event with id: scsmbstgra
+11:48:10.693 [Thread-0] DEBUG event.Event - Created Event with id: scsmbstgrc
+11:48:10.693 [Thread-0] DEBUG event.Event - Created Event with id: scsmbstgrb
+11:48:10.693 [Thread-0] INFO  main.Main - Finished parsing a log file. Left 0 entries unmatched.
+11:48:10.845 [Thread-1] INFO  hsqldb.db.HSQLDB77E877A3CB.ENGINE - Checkpoint start
+11:48:10.846 [Thread-1] INFO  hsqldb.db.HSQLDB77E877A3CB.ENGINE - checkpointClose start
+11:48:10.847 [Thread-1] INFO  hsqldb.db.HSQLDB77E877A3CB.ENGINE - checkpointClose synched
+11:48:10.851 [Thread-1] INFO  hsqldb.db.HSQLDB77E877A3CB.ENGINE - checkpointClose script done
+11:48:10.867 [Thread-1] INFO  hsqldb.db.HSQLDB77E877A3CB.ENGINE - checkpointClose end
+11:48:10.868 [Thread-1] INFO  hsqldb.db.HSQLDB77E877A3CB.ENGINE - Checkpoint end - txts: 1
+11:48:10.875 [Thread-1] DEBUG jdbcutils.JDBCUtils - Creating table in the database if not existent.
+11:48:10.877 [Thread-1] INFO  main.Main - Beginning to add Events to the database
+11:48:10.879 [Thread-1] DEBUG jdbcutils.JDBCUtils - Succesfully recorded event 'scsmbstgra' in the database
+11:48:10.879 [Thread-1] DEBUG jdbcutils.JDBCUtils - Succesfully recorded event 'scsmbstgrc' in the database
+11:48:10.879 [Thread-1] DEBUG jdbcutils.JDBCUtils - Succesfully recorded event 'scsmbstgrb' in the database
+11:48:10.942 [Thread-1] INFO  main.Main - Finished adding Events to the database'
