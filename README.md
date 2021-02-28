@@ -1,5 +1,5 @@
 ## Overview
-The program reads a JSON file holding log entries of different applications from different hosts, it matches two entries that compose events (entries labelled as "STARTED" and "FINISHED"). The event are flagged if the duration between two entries exceeded 4ms. All the events are recorded in the EVENT table of a HSQLDB database, which is stored in a local folder.
+The program reads a JSON file storing log entries of different applications from different hosts, it matches two entries that compose events (entries labelled as "STARTED" and "FINISHED"). The events are flagged (alert = true) if the duration between two entries exceeded 4ms. All the events are recorded in the EVENT table of a HSQLDB database, which is stored in a local folder.
 
 ## Usage
 
