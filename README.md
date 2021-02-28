@@ -19,12 +19,12 @@ If additionally you would like the program to use external settings for logging 
 
 ## Build and test
 
-The project is set up for a Maven build and test. Its build details and dependencies you will find in the *pom.xml*. The program uses different open source frameworks to execute.
+The project is set up for a Maven type project build and test. Its build details and dependencies can be found in the *pom.xml* file. The program uses different open source frameworks to execute.
 * gson ver 2.8.6
 * hsqldb ver 2.5.1
 * log4j ver 2.14.0
 
-Running Maven with Install goal over the project will run a unit test and produce a runnable JAR file.
+It's enough to clone the project locally and run Maven with Install goal over the project to execute a unit test and produce a runnable JAR file.
 
 ## Extra features
 
@@ -44,7 +44,7 @@ The program runs only one unit test. It uses *junit* framework for that. It is t
 
 ### Multi-threaded solution
 
-The program runs two threads concurrently. First thread parses the file and serialises the entries into the objects. The second thread runs through the list of Events and populates the database with them. The shared resource in this scenario is the List of events. The program uses *java.util.Collections.synchronizedList* wrapper to make sure there are no concurrency issues during adding, removing and iterating operations over it. This has not been tested under circumstances with the two threads actually running concurrently, due to a small size of a test json file with only 6 entries.
+The program runs two threads concurrently. First thread parses the file and serialises the entries into the objects. The second thread runs through the list of Events and populates the database with them. The shared resource between the two threads in this scenario is the list of events. The program uses *java.util.Collections.synchronizedList* wrapper to make sure there are no concurrency issues during adding, removing and iterating operations over the list. This has not been tested under circumstances with the two threads actually running concurrently, due to a small size of a test json file with only 6 entries.
 
 ### Program that can handle very large files (gigabytes)
 
@@ -61,7 +61,7 @@ The **LogMonitor** performs its task following the below algorithm:
 4. If a pair is found it tries to create an Event object and add it to the event List
 5. Upon successful event creation, the entries are removed from the list for perfomance reasons
 
-Shortly after Thread 1 is started Thread 2 starts.
+Shortly after Thread 1 is started, Thread 2 starts.
 
 **Thread 2**
 1. Open connection to the database
@@ -71,7 +71,7 @@ Shortly after Thread 1 is started Thread 2 starts.
 5. When finished check if Thread 1 is still running. If it does, go back to point 2 and start again.
 6. If Thread 1 is no longer running, close the connection with the database
 
-## Successfull program output example
+## Successfull program execution output example
 
 ```
 11:48:10.653 [Thread-0] INFO  main.Main - Beginning to read log file at logfile.txt
